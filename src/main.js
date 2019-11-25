@@ -1,56 +1,42 @@
 // =========================================================
-// * Vue Material Dashboard - v1.2.1
+// * Vuetify Material Dashboard - v1.0.0
 // =========================================================
-//
-// * Product Page: https://www.creative-tim.com/product/vue-material-dashboard
+
+// * Product Page: https://www.creative-tim.com/product/vuetify-material-dashboard
 // * Copyright 2019 Creative Tim (https://www.creative-tim.com)
-// * Licensed under MIT (https://github.com/creativetimofficial/vue-material-dashboard/blob/master/LICENSE.md)
-//
+// * Licenses under MIT
+
 // * Coded by Creative Tim
-//
+
 // =========================================================
-//
+
 // * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
 
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from "vue";
-import VueRouter from "vue-router";
-import App from "./App";
+import Vue from 'vue'
 
-// router setup
-import routes from "./routes/routes";
+// Components
+import './components'
 
 // Plugins
-import GlobalComponents from "./globalComponents";
-import GlobalDirectives from "./globalDirectives";
-import Notifications from "./components/NotificationPlugin";
+import './plugins'
+import { sync } from 'vuex-router-sync'
 
-// MaterialDashboard plugin
-import MaterialDashboard from "./material-dashboard";
+// Application imports
+import App from './App'
+import router from '@/router'
+import store from '@/store'
 
-import Chartist from "chartist";
+// Sync store with router
+sync(store, router)
 
-// configure router
-const router = new VueRouter({
-  routes, // short for routes: routes
-  linkExactActiveClass: "nav-item active"
-});
-
-Vue.prototype.$Chartist = Chartist;
-
-Vue.use(VueRouter);
-Vue.use(MaterialDashboard);
-Vue.use(GlobalComponents);
-Vue.use(GlobalDirectives);
-Vue.use(Notifications);
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: "#app",
-  render: h => h(App),
   router,
-  data: {
-    Chartist: Chartist
-  }
-});
+  store,
+  render: h => h(App)
+}).$mount('#app')

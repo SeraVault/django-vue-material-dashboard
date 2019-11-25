@@ -1,6 +1,6 @@
-# Django Vue Material Design Dashboard
+# Django Vuetify Material Design Dashboard
 
-> A boilerplate Django, Webpack, Vue, Material Design dashboard based on https://github.com/NdagiStanley/vue-django and https://www.creative-tim.com/product/vue-material-dashboard
+> A boilerplate Django, Webpack, Vue, Material Design dashboard based on https://github.com/NdagiStanley/vue-django and https://www.creative-tim.com/product/vuetify-material-dashboard
 
 ## Build Setup
 
