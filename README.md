@@ -1,6 +1,6 @@
-# bchelper
+# Django Vue Material Design Dashboard
 
-> Additional features for BigCommerce
+> A boilerplate Django, Webpack, Vue, Material Design dashboard based on https://github.com/NdagiStanley/vue-django and https://www.creative-tim.com/product/vue-material-dashboard
 
 ## Build Setup
 
